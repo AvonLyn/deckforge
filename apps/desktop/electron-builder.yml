@@ -1,0 +1,34 @@
+appId: com.deckforge.app
+productName: DeckForge
+directories:
+  output: ../../dist/desktop
+files:
+  - dist/**
+  - package.json
+extraResources:
+  - from: ../web/dist
+    to: web
+    filter:
+      - "**/*"
+  - from: ../api/dist
+    to: api
+    filter:
+      - "**/*"
+win:
+  electronLanguages:
+    - en-US
+    - zh-CN
+  target:
+    - nsis
+    - portable
+linux:
+  target:
+    - deb
+    - AppImage
+nsis:
+  artifactName: DeckForge-Setup-${version}.${ext}
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+portable:
+  artifactName: DeckForge-Portable-${version}.${ext}

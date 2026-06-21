@@ -1,0 +1,19 @@
+{
+  "name": "@deckforge/review-engine",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --target es2022 --tsconfig ../../tsconfig.base.json"
+  },
+  "dependencies": {
+    "@deckforge/deck-ir": "workspace:*"
+  }
+}

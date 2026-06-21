@@ -1,0 +1,25 @@
+{
+  "name": "@deckforge/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/server.ts --format esm --platform node --sourcemap --clean --target es2022",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@deckforge/deck-ir": "workspace:*",
+    "@deckforge/html-renderer": "workspace:*",
+    "@deckforge/llm-adapter": "workspace:*",
+    "@deckforge/material-reader": "workspace:*",
+    "@deckforge/pptx-compiler": "workspace:*",
+    "@deckforge/render-qa": "workspace:*",
+    "@deckforge/review-engine": "workspace:*",
+    "@deckforge/shared": "workspace:*",
+    "@deckforge/template-engine": "workspace:*",
+    "@fastify/cors": "^11.1.0",
+    "fastify": "^5.8.5",
+    "zod": "^4.4.3"
+  }
+}

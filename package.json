@@ -1,0 +1,32 @@
+{
+  "name": "deckforge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.8.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @deckforge/api --filter @deckforge/web dev",
+    "dev:web": "pnpm --filter @deckforge/web dev",
+    "dev:api": "pnpm --filter @deckforge/api dev",
+    "dev:desktop": "pnpm --filter @deckforge/desktop dev",
+    "build": "pnpm -r --workspace-concurrency=1 --sort --if-present build",
+    "typecheck": "tsc -p tsconfig.check.json --noEmit",
+    "package:win": "pnpm --filter @deckforge/desktop package:win"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3",
+    "playwright": "1.61.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^12.11.1"
+  }
+}

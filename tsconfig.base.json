@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "baseUrl": ".",
+    "paths": {
+      "@deckforge/deck-ir": ["packages/deck-ir/src/index.ts"],
+      "@deckforge/material-reader": ["packages/material-reader/src/index.ts"],
+      "@deckforge/template-engine": ["packages/template-engine/src/index.ts"],
+      "@deckforge/html-renderer": ["packages/html-renderer/src/index.ts"],
+      "@deckforge/pptx-compiler": ["packages/pptx-compiler/src/index.ts"],
+      "@deckforge/review-engine": ["packages/review-engine/src/index.ts"],
+      "@deckforge/render-qa": ["packages/render-qa/src/index.ts"],
+      "@deckforge/llm-adapter": ["packages/llm-adapter/src/index.ts"],
+      "@deckforge/shared": ["packages/shared/src/index.ts"]
+    }
+  }
+}

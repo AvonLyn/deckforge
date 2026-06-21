@@ -1,0 +1,23 @@
+{
+  "name": "@deckforge/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "tsx src/main/main.ts",
+    "build": "tsup src/main/main.ts --format esm --platform node --out-dir dist/main --sourcemap --clean --target es2022 --external electron && tsup src/preload/index.ts --format cjs --platform node --out-dir dist/preload --sourcemap --clean --target es2022 --external electron",
+    "package:win": "electron-builder --win nsis portable",
+    "package:linux": "electron-builder --linux deb AppImage",
+    "package:deb": "electron-builder --linux deb",
+    "package:appimage": "electron-builder --linux AppImage",
+    "package:mac": "electron-builder --mac dmg"
+  },
+  "dependencies": {
+    "electron-is-dev": "^3.0.1"
+  },
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3"
+  }
+}
